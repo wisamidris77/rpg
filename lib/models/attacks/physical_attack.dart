@@ -1,4 +1,5 @@
-import 'package:rpg/models/player.dart';
+import 'package:rpg/models/entities/damageable.dart';
+import 'package:rpg/models/entities/player.dart';
 import 'attack.dart';
 
 class PhysicalAttack implements Attack {
@@ -10,7 +11,7 @@ class PhysicalAttack implements Attack {
   String get name => 'Physical Strike';
 
   @override
-  int calculateDamage(Player target) {
+  int calculateDamage(Damageable target) {
     return baseDamage;
   }
 }

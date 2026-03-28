@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/player.dart';
+import '../models/entities/player.dart';
 import '../engine/combat_engine.dart';
 import '../models/attacks/physical_attack.dart';
 import '../models/attacks/fire_attack.dart';

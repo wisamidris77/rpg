@@ -1,4 +1,5 @@
-import 'package:rpg/models/player.dart';
+import 'package:rpg/models/entities/damageable.dart';
+import 'package:rpg/models/entities/player.dart';
 import 'attack.dart';
 
 class FireAttack implements Attack {
@@ -10,7 +11,7 @@ class FireAttack implements Attack {
   String get name => 'Fireball';
 
   @override
-  int calculateDamage(Player target) {
+  int calculateDamage(Damageable target) {
     return baseDamage + 5;
   }
 }
