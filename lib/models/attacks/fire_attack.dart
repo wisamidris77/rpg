@@ -1,5 +1,4 @@
 import 'package:rpg/models/entities/damageable.dart';
-import 'package:rpg/models/entities/player.dart';
 import 'attack.dart';
 
 class FireAttack implements Attack {
