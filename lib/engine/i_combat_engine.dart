@@ -1,4 +1,4 @@
-import '../models/entities/damageable.dart';
+import '../models/entities/interfaces/damageable.dart';
 import '../models/attacks/attack.dart';
 
 abstract class ICombatEngine {

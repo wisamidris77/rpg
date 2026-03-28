@@ -1,4 +1,5 @@
-import 'package:rpg/models/entities/damageable.dart';
+import 'package:rpg/models/combat/combat_rules.dart';
+import 'package:rpg/models/entities/interfaces/damageable.dart';
 import 'attack.dart';
 
 class PhysicalAttack implements Attack {
@@ -9,8 +10,15 @@ class PhysicalAttack implements Attack {
   @override
   String get name => 'Physical Strike';
 
+
   @override
-  int calculateDamage(Damageable target) {
+  int calculateBaseDamage(Damageable target) {
     return baseDamage;
   }
+
+  @override
+  Element get element => Element.physical;
+
+  @override
+  List<StatusEffect> get secondaryEffects => [];
 }

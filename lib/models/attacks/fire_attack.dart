@@ -1,4 +1,6 @@
-import 'package:rpg/models/entities/damageable.dart';
+import '../entities/interfaces/damageable.dart';
+import '../combat/combat_rules.dart';
+import '../combat/burn_effect.dart';
 import 'attack.dart';
 
 class FireAttack implements Attack {
@@ -10,7 +12,11 @@ class FireAttack implements Attack {
   String get name => 'Fireball';
 
   @override
-  int calculateDamage(Damageable target) {
-    return baseDamage + 5;
-  }
+  Element get element => Element.fire;
+
+  @override
+  int calculateBaseDamage(Damageable target) => baseDamage;
+
+  @override
+  List<StatusEffect> get secondaryEffects => [BurnEffect(remainingTurns: 3, damagePerTurn: 5)];
 }
